@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import Currency from "react-currency-formatter";
-import { urlFor } from "../../sanity";
+import { urlFor } from "../sanity";
 import { useState } from "react";
 import { MinusCircleIcon, PlusCircleIcon } from "react-native-heroicons/solid";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,7 +9,7 @@ import {
   addToBasket,
   removeFromBasket,
   selectBasketItemsWithId,
-} from "../../features/basketSlice";
+} from "../features/basketSlice";
 
 export default function DishRow({ id, name, description, price, image }) {
   const [isPressed, setIsPressed] = useState(false);

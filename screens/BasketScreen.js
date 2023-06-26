@@ -9,14 +9,14 @@ import {
 import React, { useMemo, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { useDispatch, useSelector } from "react-redux";
-import { selectRestaurant } from "../../features/restaurantSlice";
+import { selectRestaurant } from "../features/restaurantSlice";
 import {
   removeFromBasket,
   selectBasketItems,
   selectBasketTotal,
-} from "../../features/basketSlice";
+} from "../features/restaurantSlice";
 import { XCircleIcon } from "react-native-heroicons/solid";
-import { urlFor } from "../../sanity";
+import { urlFor } from "../sanity";
 import Currency from "react-currency-formatter";
 
 export default function BasketScreen() {

@@ -14,8 +14,8 @@ import {
   MagnifyingGlassIcon,
   AdjustmentsVerticalIcon,
 } from "react-native-heroicons/outline";
-import Categories from "./components/Categories";
-import FeaturedRow from "./components/FeaturedRow";
+import Categories from "../components/Categories";
+import FeaturedRow from "../components/FeaturedRow";
 import sanityClient from "../sanity";
 import "react-native-url-polyfill/auto";
 

@@ -1,7 +1,7 @@
 import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native";
 import React, { useEffect, useLayoutEffect } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
-import { urlFor } from "../../sanity";
+import { urlFor } from "../sanity";
 import {
   ArrowLeftIcon,
   StarIcon,
@@ -9,10 +9,10 @@ import {
   MapPinIcon,
 } from "react-native-heroicons/solid";
 import { QuestionMarkCircleIcon } from "react-native-heroicons/outline";
-import DishRow from "./DishRow";
-import BasketIcon from "./BasketIcon";
+import DishRow from "../components/DishRow";
+import BasketIcon from "../components/BasketIcon";
 import { useDispatch } from "react-redux";
-import { setRestaurant } from "../../features/restaurantSlice";
+import { setRestaurant } from "../features/restaurantSlice";
 
 export default function RestaurantScreen() {
   const navigation = useNavigation();

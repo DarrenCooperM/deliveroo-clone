@@ -1,7 +1,7 @@
 import { ScrollView } from "react-native";
 import React, { useEffect, useState } from "react";
 import CategoryCard from "./CategoryCard";
-import sanityClient, { urlFor } from "../../sanity";
+import sanityClient, { urlFor } from "../sanity";
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
