@@ -21,7 +21,7 @@ export default function DishRow({ id, name, description, price, image }) {
   };
 
   const removeItemFromBasket = () => {
-    // if (!items.length > 0) return; -- disabled in the button
+    if (!items.length > 0) return;
     dispatch(removeFromBasket({ id }));
   };
   return (
@@ -55,10 +55,7 @@ export default function DishRow({ id, name, description, price, image }) {
       {isPressed && (
         <View className="bg-white px-4">
           <View className="flex-row items-center space-x-2 pb-3">
-            <TouchableOpacity
-              disabled={!items.length > 0}
-              onPress={removeItemFromBasket}
-            >
+            <TouchableOpacity onPress={removeItemFromBasket}>
               <MinusCircleIcon
                 size={40}
                 color={items.length > 0 ? "#00BBCC" : "gray"}
