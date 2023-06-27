@@ -14,7 +14,7 @@ import {
   removeFromBasket,
   selectBasketItems,
   selectBasketTotal,
-} from "../features/restaurantSlice";
+} from "../features/basketSlice";
 import { XCircleIcon } from "react-native-heroicons/solid";
 import { urlFor } from "../sanity";
 import Currency from "react-currency-formatter";
@@ -121,7 +121,10 @@ export default function BasketScreen() {
               <Currency quantity={basketTotal + 5.99} currency="NZD" />
             </Text>
           </View>
-          <TouchableOpacity className="rounded-lg bg-[#00CCBB] p-4">
+          <TouchableOpacity
+            className="rounded-lg bg-[#00CCBB] p-4"
+            onPress={() => navigation.navigate("PreparingOrderScreen")}
+          >
             <Text className="text-center text-white text-lg font-bold">
               Place Order
             </Text>
